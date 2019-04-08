@@ -3,3 +3,6 @@ src/static_root
 src/media_root
 *.pyc
 __pycache__/
+node_modules
+build
+package-lock.json
