@@ -3,7 +3,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
-from core.views import BootstrapFilterView, ReactFilterView
+from core.views import BootstrapFilterView, ReactFilterView, ReactInfiniteView
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
@@ -12,6 +12,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', BootstrapFilterView, name='bootstrap'),
     path('api/', ReactFilterView.as_view(), name='react'),
+    path('infinite-api/', ReactInfiniteView.as_view(), name='infinite-react'),
     re_path(r'^react/', TemplateView.as_view(template_name='index.html')),
 ]
 

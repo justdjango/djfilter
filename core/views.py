@@ -1,6 +1,7 @@
 from django.db.models import Q, Count
 from django.shortcuts import render, get_object_or_404
 from rest_framework import generics
+from rest_framework.response import Response
 from .models import Journal, Category
 from .serializers import JournalSerializer
 
@@ -58,6 +59,19 @@ def filter(request):
     return qs
 
 
+def infinite_filter(request):
+    limit = request.GET.get('limit')
+    offset = request.GET.get('offset')
+    return Journal.objects.all()[int(offset): int(offset) + int(limit)]
+
+
+def is_there_more_data(request):
+    offset = request.GET.get('offset')
+    if int(offset) > Journal.objects.all().count():
+        return False
+    return True
+
+
 def BootstrapFilterView(request):
     qs = filter(request)
     context = {
@@ -73,3 +87,19 @@ class ReactFilterView(generics.ListAPIView):
     def get_queryset(self):
         qs = filter(self.request)
         return qs
+
+
+class ReactInfiniteView(generics.ListAPIView):
+    serializer_class = JournalSerializer
+
+    def get_queryset(self):
+        qs = infinite_filter(self.request)
+        return qs
+
+    def list(self, request):
+        queryset = self.get_queryset()
+        serializer = self.serializer_class(queryset, many=True)
+        return Response({
+            "journals": serializer.data,
+            "has_more": is_there_more_data(request)
+        })
