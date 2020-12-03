@@ -35,3 +35,14 @@ Use `git reset -- hard <commit_hash>` along with the commit hash for each video 
 8. (e7e37bbf269562900d2e47323802dc5880afb34c)[https://youtu.be/EMR8jlkAbCA]
 9. (6fdbf72acec763380a368460a9d436f26451356f)[https://youtu.be/bK2gZymltRI]
 10. (01e9e69434a757df68883000232bd39e08240edd)[https://youtu.be/4W8ZJPPNn9k]
+
+---
+
+<div align="center">
+
+<i>Other places you can find us:</i><br>
+
+<a href="https://www.youtube.com/channel/UCRM1gWNTDx0SHIqUJygD-kQ" target="_blank"><img src="https://img.shields.io/badge/YouTube-%23E4405F.svg?&style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
+<a href="https://www.twitter.com/justdjangocode" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231877F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a>
+
+</div>
