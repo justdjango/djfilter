@@ -1,8 +1,25 @@
+<p align="center">
+  <p align="center">
+    <a href="https://justdjango.com/?utm_source=github&utm_medium=logo" target="_blank">
+      <img src="https://assets.justdjango.com/static/branding/logo.svg" alt="JustDjango" height="72">
+    </a>
+  </p>
+  <p align="center">
+    The Definitive Django Learning Platform.
+  </p>
+</p>
+
+### *** Deprecation Warning ***
+
+This project is over two years old so you should assume it is outdated. You can still watch the [tutorials](https://youtu.be/-X1KMCM_uts) to learn how to build this project.
+
 # Django Filtering Form
 
-[![alt text](https://github.com/justdjango/djfilter/blob/master/thumbnail.png "Logo")](https://youtu.be/-X1KMCM_uts)
-
 This project showcases an advanced filtering form. At first the form is built with Bootstrap and later on with React.
+
+<p align="center">
+  <a href="https://youtu.be/-X1KMCM_uts"><img src="https://github.com/justdjango/djfilter/blob/master/thumbnail.png" width="290"></a>
+</p>
 
 ### Tutorial and commit links
 
